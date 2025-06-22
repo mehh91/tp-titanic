@@ -1,21 +1,68 @@
-# Ignore Python environments and caches
-venv/
+# === PYTHON ===
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
 *.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+pip-wheel-metadata/
+*.log
 
-# Ignore MLflow metadata and state files
-mlruns/
+# === ENVIRONNEMENT VIRTUEL ===
+venv/
+env/
+ENV/
 
-# Ignore Terraform state
+# === JUPYTER / NOTEBOOKS ===
+.ipynb_checkpoints
+
+# === DOCKER ===
+*.env
+docker-compose.override.yml
+
+# === TERRAFORM ===
 *.tfstate
 *.tfstate.*
 .terraform/
+terraform.tfvars
+terraform.tfvars.json
+crash.log
 
-# Ignore AWS credentials or keys
+# === MLflow ===
+mlruns/
+mlartifacts/
+
+# === DONNÉES ===
+data/*.csv
+data/*.xlsx
+data/*.parquet
+*.h5
+*.pkl
+
+# === ANSIBLE ===
+*.retry
+inventories/*/host_vars/
+inventories/*/group_vars/
+
+# === CLÉS / CREDENTIALS / SÉCURITÉ ===
 infra/*.pem
+infra/.ssh/
+*.key
+*.crt
+*.der
 
-# Ignore OS-specific files
+# === OS / IDE / ÉDITEURS ===
 .DS_Store
 Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# === AUTRES FICHIERS PERSOS ===
+*.zip
+*.tar.gz
