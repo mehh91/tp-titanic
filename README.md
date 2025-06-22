@@ -138,3 +138,4 @@ Puis ouvrir : http://<training_instance_ip>:5000
 
 - Mehdi YAKOUBENE et Mehdi LOULIZI – Projet MLOps – Juin 2025
 "# titanic-tp" 
+"# titanic-tp" 
