@@ -17,7 +17,30 @@ Ce projet met en œuvre un pipeline MLOps complet pour entraîner et déployer u
 - Entraîner un modèle ML avec scikit-learn et le versionner avec MLflow
 - Servir un modèle via une API REST
 
-<pre> titanic-mlops/ ├── infra/ # Infrastructure AWS avec Terraform │ ├── main.tf │ ├── variables.tf │ ├── outputs.tf │ ├── provider.tf │ ├── terraform.tfvars # (à créer) │ └── mlops-key.pem # Clé SSH pour connexion ├── ansible/ # Configuration système avec Ansible │ ├── inventories/ │ │ └── hosts │ └── site.yml ├── ml/ # Code machine learning │ ├── train_model.py # Script d'entraînement MLflow │ ├── data_preprocessing.py# Nettoyage et transformation des données │ └── predict_api.py # API de prédiction FastAPI ├── model/ # Modèle entraîné et exporté ├── mlruns/ # Répertoire MLflow pour les expériences ├── requirements.txt # Dépendances Python └── README.md </pre>
+## Arborescence du projet
+
+```
+titanic-mlops/
+├── infra/                   # Infrastructure AWS avec Terraform
+│   ├── main.tf
+│   ├── variables.tf
+│   ├── outputs.tf
+│   ├── provider.tf
+│   ├── terraform.tfvars     # (à créer)
+│   └── mlops-key.pem        # Clé SSH pour connexion
+├── ansible/                 # Configuration système avec Ansible
+│   ├── inventories/
+│   │   └── hosts
+│   └── site.yml
+├── ml/                      # Code machine learning
+│   ├── train_model.py       # Script d'entraînement MLflow
+│   ├── data_preprocessing.py# Nettoyage et transformation des données
+│   └── predict_api.py       # API de prédiction FastAPI
+├── model/                   # Modèle entraîné et exporté
+├── mlruns/                  # Répertoire MLflow pour les expériences
+├── requirements.txt         # Dépendances Python
+└── README.md
+```
 
 ## Prérequis techniques
 
