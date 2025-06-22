@@ -5,11 +5,10 @@ import mlflow.sklearn
 
 app = FastAPI()
 
-# Chemin exact vers le modèle MLflow
+# Chargement du modèle depuis le dossier 'model' enregistré avec MLflow
 model = mlflow.sklearn.load_model("model")
 
-
-# Structure des données d'entrée
+# Définition du schéma d'entrée attendu pour une prédiction
 class Passenger(BaseModel):
     Pclass: int
     Sex: int
@@ -20,10 +19,17 @@ class Passenger(BaseModel):
     Embarked_Q: int
     Embarked_S: int
 
+# Endpoint de test (page d'accueil)
 @app.get("/")
 def home():
-    return {"message": "API Titanic prête 🚢"}
+    return {"message": "API Titanic prête"}
 
+# ✅ Nouveau endpoint pour vérifier l'état de l'API
+@app.get("/health")
+def health_check():
+    return {"status": "ok", "model_loaded": True}
+
+# Endpoint de prédiction
 @app.post("/predict")
 def predict(passenger: Passenger):
     data = pd.DataFrame([passenger.dict()])
