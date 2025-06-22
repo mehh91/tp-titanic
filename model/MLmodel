@@ -1,0 +1,22 @@
+artifact_path: file:///C:/Users/mehdi/titanic-mlops/mlruns/945424506234515223/models/m-f93b07d518f140d69ac56e14962d5f0e/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.9
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.0
+mlflow_version: 3.1.0
+model_id: m-f93b07d518f140d69ac56e14962d5f0e
+model_size_bytes: 936
+model_uuid: m-f93b07d518f140d69ac56e14962d5f0e
+prompts: null
+run_id: 5d53fd0bc5714bf3abda7d802d430fa4
+utc_time_created: '2025-06-19 16:23:28.230582'

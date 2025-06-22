@@ -1,0 +1,22 @@
+- name: Setup Titanic ML project
+  hosts: localhost
+  become: true
+
+  tasks:
+    - name: Install required system packages
+      apt:
+        name:
+          - python3
+          - python3-pip
+          - python3-venv
+        state: present
+        update_cache: yes
+
+    - name: Create virtual environment
+      command: python3 -m venv /ansible/titanic-mlops/venv
+      args:
+        creates: /ansible/titanic-mlops/venv
+
+    - name: Install Python packages in virtual environment
+      command: /ansible/titanic-mlops/venv/bin/pip install -r /ansible/titanic-mlops/requirements.txt
+

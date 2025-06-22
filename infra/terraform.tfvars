@@ -1,0 +1,6 @@
+aws_region      = "us-east-1"
+aws_access_key  = "VOTRE_ACCESS_KEY"
+aws_secret_key  = "VOTRE_SECRET_KEY"
+instance_type   = "t2.micro"
+key_name        = "mlops-key"
+public_key_path = "~/.ssh/mlops-key.pub"
